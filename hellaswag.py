@@ -167,6 +167,8 @@ def evaluate(model_type, device):
             for i, end in enumerate(example["endings"]):
                 print(f"{i} (loss: {avg_loss[i].item():.4f}) {end}")
             print(f"predicted: {pred_norm}, actual: {label}")
+        else:
+            break
 
 if __name__ == "__main__":
     import argparse
